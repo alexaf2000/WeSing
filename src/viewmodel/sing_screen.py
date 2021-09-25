@@ -19,5 +19,5 @@ def set_video():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 success = False
-        wn.blit(pygame.image.frombuffer(img.tobytes(), shape, "BGR"), (0, 0))
-        pygame.display.update()
+        wn.blit(pygame.transform.scale(pygame.image.frombuffer(img.tobytes(), shape, "BGR"), (1920,1080)), (0, 0))
+        pygame.display.flip()
